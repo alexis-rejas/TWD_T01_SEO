@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende cómo optimizar tu sitio web para buscadores. Guía completa sobre SEO: cómo funciona, escenarios, prevención de errores, demo interactivo y casos reales.">
+    <meta name="keywords" content="SEO, optimización, posicionamiento, Google, buscadores">
+    <meta name="author" content="SEO Mastery">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Optimización SEO de Páginas Web">
+    <meta property="og:description" content="Aprende cómo mejorar la visibilidad de tu sitio en buscadores">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="http://localhost:8000/">
+    <link rel="sitemap" href="/sitemap.xml">
+    <title>Optimización SEO de Páginas Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Optimización SEO de Páginas Web</h1>
+            <p>Aprende cómo mejorar la visibilidad de tu sitio en buscadores</p>
+        </header>
+
+        <nav>
+            <button class="nav-btn active" data-section="home">Inicio</button>
+            <button class="nav-btn" data-section="como-funciona">Cómo Funciona</button>
+            <button class="nav-btn" data-section="escenarios">Escenarios de Uso</button>
+            <button class="nav-btn" data-section="prevenir">Cómo Prevenir</button>
+            <button class="nav-btn" data-section="demo">Demo Interactivo</button>
+            <button class="nav-btn" data-section="caso-real">Caso Real</button>
+        </nav>
+
+        <div class="content">
+            {% include 'clientes/home.html' %}
+            {% include 'clientes/como_funciona.html' %}
+            {% include 'clientes/escenarios.html' %}
+            {% include 'clientes/prevenir.html' %}
+            {% include 'clientes/demo.html' %}
+            {% include 'clientes/caso_real.html' %}
+        </div>
+
+        <footer>
+            <p>Aprende más sobre SEO en recursos como Google Search Central, Moz, SEMrush y Ahrefs.</p>
+            <p>Este es un proyecto educativo sobre optimización SEO de páginas web.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<section id="demo" class="section">
+    <h2>Demo Interactivo</h2>
+    <p>Analiza qué tan optimizada está tu página para SEO. Ingresa la información y obtén un score:</p>
+
+    <div class="demo-section">
+        <h3>Analizador SEO</h3>
+
+        <div class="input-group">
+            <label for="title">Título de la Página (max 60 caracteres):</label>
+            <input type="text" id="title" placeholder="Ej: Compra Zapatos Online | MiTienda">
+        </div>
+
+        <div class="input-group">
+            <label for="description">Meta Descripción (120-160 caracteres):</label>
+            <textarea id="description" rows="3" placeholder="Ej: Descubre nuestra colección de zapatos premium con envío gratis y devoluciones"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="keywords">Palabras clave principales (separadas por comas):</label>
+            <input type="text" id="keywords" placeholder="Ej: zapatos online, zapatillas deportivas, zapatos baratos">
+        </div>
+
+        <div class="input-group">
+            <label for="content-length">¿El contenido tiene más de 300 palabras?</label>
+            <select id="content-length">
+                <option value="">-- Selecciona --</option>
+                <option value="yes">Sí</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>
+                <input type="checkbox" id="mobile-friendly"> Sitio adaptado para móvil
+            </label>
+        </div>
+
+        <div class="input-group">
+            <label>
+                <input type="checkbox" id="https"> Sitio con HTTPS
+            </label>
+        </div>
+
+        <div class="input-group">
+            <label>
+                <input type="checkbox" id="fast-load"> Sitio carga en menos de 3 segundos
+            </label>
+        </div>
+
+        <button class="primary" onclick="analyzeForSEO()">Analizar mi Página</button>
+
+        <div id="seo-result" class="result">
+            <h3>Resultado del Análisis</h3>
+            <div id="result-content"></div>
+        </div>
+    </div>
+</section>

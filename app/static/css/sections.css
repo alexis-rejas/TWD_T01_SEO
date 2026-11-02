@@ -1,0 +1,350 @@
+/* Estilos específicos para secciones */
+
+/* Home Section */
+#home .card {
+    background: #2d3a5c;
+    border-left: 4px solid #fbbf24;
+}
+
+#home ul {
+    margin: 15px 0;
+}
+
+#home ul li {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Como Funciona Section */
+#como-funciona h3 {
+    margin-top: 30px;
+    color: #60a5fa;
+}
+
+#como-funciona .card {
+    background: #2d3a5c;
+    border-left: 4px solid #10b981;
+    margin: 20px 0;
+}
+
+#como-funciona ul li {
+    margin-bottom: 12px;
+}
+
+/* Escenarios Section */
+#escenarios h3 {
+    margin-top: 25px;
+    color: #60a5fa;
+}
+
+#escenarios p {
+    margin-bottom: 12px;
+    color: #d1d5db;
+}
+
+#escenarios strong {
+    color: #fbbf24;
+}
+
+#escenarios ul {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+/* Prevenir Section */
+#prevenir h3 {
+    color: #60a5fa;
+    margin-top: 30px;
+}
+
+#prevenir h4 {
+    margin-bottom: 15px;
+}
+
+#prevenir h4.bad-example {
+    color: #ef4444;
+    margin-top: 20px;
+}
+
+#prevenir h4.info-example {
+    color: #60a5fa;
+    margin-top: 20px;
+}
+
+#prevenir .params-header {
+    margin-top: 30px;
+}
+
+#prevenir .errors-header {
+    margin-top: 30px;
+}
+
+#prevenir .success-header {
+    margin-top: 30px;
+}
+
+#prevenir .impact-header {
+    margin-top: 30px;
+}
+
+#prevenir .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#prevenir .comparison-item {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#prevenir .comparison-item.bad {
+    background: #5f2120;
+    border-left: 4px solid #ef4444;
+}
+
+#prevenir .comparison-item.good {
+    background: #064e3b;
+    border-left: 4px solid #10b981;
+}
+
+#prevenir .comparison-item h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #f3f4f6;
+}
+
+#prevenir .comparison-item p {
+    color: #d1d5db;
+    margin-bottom: 10px;
+}
+
+#prevenir .comparison-item ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#prevenir .comparison-item li {
+    color: #d1d5db;
+    margin-bottom: 8px;
+}
+
+#prevenir .comparison-item pre {
+    background: #1a1f3a;
+    border: 1px solid #3f4a6f;
+    color: #d1d5db;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+#prevenir .comparison-item code {
+    color: #fbbf24;
+    font-size: 0.85em;
+}
+
+#prevenir .result-bad {
+    margin-top: 10px;
+    color: #ef4444;
+}
+
+#prevenir .result-good {
+    margin-top: 10px;
+    color: #10b981;
+}
+
+#prevenir .card {
+    background: #2d3a5c;
+    border-left: 4px solid #fbbf24;
+}
+
+#prevenir .card-success {
+    background: #064e3b;
+    border-left-color: #10b981;
+}
+
+#prevenir .card-success strong {
+    color: #10b981;
+}
+
+#prevenir .card-success .impact-list {
+    margin-top: 10px;
+    color: #10b981;
+}
+
+#prevenir .card-success .impact-list li {
+    color: #10b981;
+}
+
+#prevenir table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#prevenir table thead {
+    background: #0f172a;
+    border-bottom: 2px solid #fbbf24;
+}
+
+#prevenir table th {
+    padding: 12px;
+    text-align: left;
+    color: #fbbf24;
+    font-weight: 600;
+    border: 1px solid #3f4a6f;
+}
+
+#prevenir table td {
+    padding: 12px;
+    color: #d1d5db;
+    border: 1px solid #3f4a6f;
+}
+
+#prevenir table tbody tr:nth-child(even) {
+    background: #1a1f3a;
+}
+
+/* Demo Section */
+#demo h3 {
+    color: #60a5fa;
+    margin-top: 15px;
+}
+
+#demo .demo-section {
+    background: #2d3a5c;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #3f4a6f;
+}
+
+#demo .input-group {
+    margin: 15px 0;
+}
+
+#demo label {
+    color: #d1d5db;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#demo input,
+#demo textarea,
+#demo select {
+    width: 100%;
+    padding: 12px;
+}
+
+#demo input:focus,
+#demo textarea:focus,
+#demo select:focus {
+    border-color: #fbbf24;
+    box-shadow: 0 0 5px rgba(251, 191, 36, 0.3);
+    outline: none;
+}
+
+#demo button.primary {
+    background: #fbbf24;
+    color: #0f172a;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+
+#demo button.primary:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(251, 191, 36, 0.5);
+}
+
+#demo #seo-result {
+    background: #2d3a5c;
+    border: 2px solid #fbbf24;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+}
+
+#demo #seo-result.show {
+    display: block;
+}
+
+/* Caso Real Section */
+#caso-real h3 {
+    color: #60a5fa;
+    margin-top: 30px;
+}
+
+#caso-real h4 {
+    color: #fbbf24;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#caso-real h4.case-before,
+#caso-real h4.case-actions,
+#caso-real h4.case-results,
+#caso-real h4.case-lessons {
+    color: #fbbf24;
+}
+
+#caso-real .metrics-header {
+    margin-top: 30px;
+    color: #60a5fa;
+}
+
+#caso-real .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+#caso-real .metric-card {
+    background: #2d3a5c;
+    border-left: 4px solid #fbbf24;
+}
+
+#caso-real .metric-value {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #fbbf24;
+}
+
+#caso-real .card {
+    background: #2d3a5c;
+    border-left: 4px solid #fbbf24;
+}
+
+#caso-real ul {
+    margin-left: 25px;
+}
+
+#caso-real ul li {
+    color: #d1d5db;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+#caso-real .card strong {
+    color: #fbbf24;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #prevenir .comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    #caso-real .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}

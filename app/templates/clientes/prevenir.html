@@ -1,0 +1,153 @@
+<section id="prevenir" class="section">
+    <h2>Cómo Prevenir Problemas de SEO</h2>
+
+    <h3>Sitemap.xml - Uso Correcto e Incorrecto</h3>
+    <p>El sitemap.xml es crucial para que Google indexe correctamente tu sitio. Aquí te muestro cómo hacerlo bien y cómo NO hacerlo.</p>
+
+    <h4 class="bad-example">Sitemap Incorrecto - Lo que NO debes hacer</h4>
+    <div class="comparison">
+        <div class="comparison-item bad">
+            <h4>MAL - Incompleto y Desorganizado</h4>
+            <p><strong>Problemas:</strong></p>
+            <ul>
+                <li>Solo 2 URLs (falta contenido)</li>
+                <li>Sin prioridades especificadas</li>
+                <li>Sin fecha de última modificación</li>
+                <li>Incluye páginas 404 y admin</li>
+            </ul>
+            <pre><code>&lt;?xml version="1.0"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://localhost:8000/&lt;/loc&gt;
+    &lt;/url&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://localhost:8000/admin&lt;/loc&gt;
+    &lt;/url&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://localhost:8000/pagina-muerta&lt;/loc&gt;
+    &lt;/url&gt;
+&lt;/urlset&gt;</code></pre>
+            <p class="result-bad"><strong>Resultado:</strong> Google confundido, indexa paginas innecesarias.</p>
+        </div>
+        <div class="comparison-item good">
+            <h4>BIEN - Completo y Optimizado</h4>
+            <p><strong>Ventajas:</strong></p>
+            <ul>
+                <li>Todas las URLs importantes incluidas</li>
+                <li>Prioridades claras (1.0 a 0.5)</li>
+                <li>Fecha de última modificación</li>
+                <li>Frecuencia de cambios especificada</li>
+                <li>Solo contenido público</li>
+            </ul>
+            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://localhost:8000/&lt;/loc&gt;
+        &lt;lastmod&gt;2026-11-02&lt;/lastmod&gt;
+        &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+        &lt;priority&gt;1.0&lt;/priority&gt;
+    &lt;/url&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://localhost:8000/#como-funciona&lt;/loc&gt;
+        &lt;lastmod&gt;2026-11-02&lt;/lastmod&gt;
+        &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+        &lt;priority&gt;0.8&lt;/priority&gt;
+    &lt;/url&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://localhost:8000/#escenarios&lt;/loc&gt;
+        &lt;lastmod&gt;2026-11-02&lt;/lastmod&gt;
+        &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+        &lt;priority&gt;0.8&lt;/priority&gt;
+    &lt;/url&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://localhost:8000/#demo&lt;/loc&gt;
+        &lt;lastmod&gt;2026-11-02&lt;/lastmod&gt;
+        &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+        &lt;priority&gt;0.8&lt;/priority&gt;
+    &lt;/url&gt;
+    &lt;url&gt;
+        &lt;loc&gt;http://localhost:8000/#caso-real&lt;/loc&gt;
+        &lt;lastmod&gt;2026-11-02&lt;/lastmod&gt;
+        &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+        &lt;priority&gt;0.7&lt;/priority&gt;
+    &lt;/url&gt;
+&lt;/urlset&gt;</code></pre>
+            <p class="result-good"><strong>Resultado:</strong> Google rastrea todo eficientemente.</p>
+        </div>
+    </div>
+
+    <h3 class="params-header">Parámetros del Sitemap Explicados</h3>
+    
+    <h4 class="info-example">1. &lt;loc&gt; - Ubicación de la página</h4>
+    <div class="card">
+        <p><strong>Mal:</strong> <code>https://sitio.com/pagina 404</code> (URLs rotas)</p>
+        <p><strong>Bien:</strong> <code>https://sitio.com/blog/articulo</code> (URLs válidas)</p>
+    </div>
+
+    <h4 class="info-example">2. &lt;lastmod&gt; - Última modificación</h4>
+    <div class="card">
+        <p><strong>Mal:</strong> Sin especificar o fecha antigua</p>
+        <p><strong>Bien:</strong> <code>&lt;lastmod&gt;2026-11-02&lt;/lastmod&gt;</code></p>
+    </div>
+
+    <h4 class="info-example">3. &lt;changefreq&gt; - Frecuencia de cambios</h4>
+    <div class="card">
+        <p><strong>Opciones:</strong></p>
+        <ul>
+            <li><strong>always</strong> - Cambia cada vez (muy pocas)</li>
+            <li><strong>daily</strong> - Página principal, actualizaciones diarias</li>
+            <li><strong>weekly</strong> - Blog, productos (semanal)</li>
+            <li><strong>monthly</strong> - Artículos antiguos (mensual)</li>
+            <li><strong>yearly</strong> - Páginas legales (anual)</li>
+            <li><strong>never</strong> - Nunca cambia (archivado)</li>
+        </ul>
+    </div>
+
+    <h4 class="info-example">4. &lt;priority&gt; - Prioridad relativa</h4>
+    <div class="card">
+        <p><strong>Escala de 0.0 a 1.0:</strong></p>
+        <ul>
+            <li><strong>1.0</strong> - Página principal (máxima)</li>
+            <li><strong>0.9</strong> - Categorías principales</li>
+            <li><strong>0.8</strong> - Productos/Artículos importantes</li>
+            <li><strong>0.7</strong> - Contenido secundario</li>
+            <li><strong>0.5</strong> - Contacto, About</li>
+            <li><strong>0.3</strong> - Páginas legales</li>
+        </ul>
+    </div>
+
+    <h3 class="errors-header">Errores Comunes en Sitemap</h3>
+    <ul class="checklist">
+        <li class="fail">Incluir páginas privadas (admin, login)</li>
+        <li class="fail">Incluir URLs duplicadas con parámetros</li>
+        <li class="fail">Incluir páginas 404 o enlaces rotos</li>
+        <li class="fail">No actualizar lastmod</li>
+        <li class="fail">Usar prioridades incorrectas para todo</li>
+        <li class="fail">No referenciar en robots.txt</li>
+        <li class="fail">Ubicar en carpeta equivocada</li>
+    </ul>
+
+    <h3 class="success-header">Checklist de Sitemap Correcto</h3>
+    <ul class="checklist">
+        <li class="ok">Ubicado en raíz: /sitemap.xml</li>
+        <li class="ok">Incluye todas las páginas públicas importantes</li>
+        <li class="ok">Especifica lastmod (fecha de modificación)</li>
+        <li class="ok">Especifica changefreq apropiada</li>
+        <li class="ok">Especifica priority realista</li>
+        <li class="ok">Solo URLs válidas (sin 404)</li>
+        <li class="ok">Referenciado en robots.txt</li>
+        <li class="ok">Válido según XML Schema</li>
+    </ul>
+
+    <h3 class="impact-header">Impacto en SEO</h3>
+    <div class="card card-success">
+        <strong>Con un Sitemap Correcto:</strong>
+        <ul class="impact-list">
+            <li>Google rastrea e indexa 100% del contenido</li>
+            <li>Páginas importantes aparecen en rankings</li>
+            <li>Mejor distribución de autoridad</li>
+            <li>Indexación más rápida</li>
+            <li>Google entiende la estructura</li>
+        </ul>
+    </div>
+</section>

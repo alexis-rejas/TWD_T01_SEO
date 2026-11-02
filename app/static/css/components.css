@@ -1,0 +1,158 @@
+/* Componentes y Estilos Específicos */
+
+/* Headings - h4 personalizado */
+h4 {
+    color: #f44336;
+    margin-top: 20px;
+}
+
+h4.section-header {
+    color: #764ba2;
+    margin-top: 20px;
+}
+
+h4.accent-blue {
+    color: #667eea;
+}
+
+/* Colores de h4 específicos */
+h4[style*="color: #764ba2"] {
+    color: #764ba2 !important;
+    margin-top: 20px;
+}
+
+h4[style*="color: #f44336"] {
+    color: #f44336 !important;
+    margin-top: 20px;
+}
+
+h4[style*="color: #667eea"] {
+    color: #667eea !important;
+    margin-top: 20px;
+}
+
+/* Pre y Code */
+pre {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table thead {
+    background: #667eea;
+    color: white;
+}
+
+table th {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+/* Margin y Padding Utilities */
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mt-30 { margin-top: 30px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-15 { margin-bottom: 15px; }
+.p-10 { padding: 10px; }
+.p-15 { padding: 15px; }
+
+/* Text Colors */
+.text-error { color: #c62828; }
+.text-success { color: #2e7d32; }
+.text-info { color: #1565c0; }
+.text-warning { color: #856404; }
+
+/* Background Colors for Cards */
+.card-error {
+    background: #c8e6c9;
+    border-color: #4caf50;
+}
+
+.card-warning {
+    background: #fff3cd;
+    border-color: #ff9800;
+}
+
+.card-info {
+    background: #e3f2fd;
+    border-color: #2196f3;
+}
+
+/* Grid Layout */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Estilos específicos para prevenir.html */
+.bad-example {
+    color: #f44336;
+    margin-top: 20px;
+}
+
+.good-example {
+    color: #2e7d32;
+    margin-top: 20px;
+}
+
+.info-example {
+    color: #667eea;
+    margin-top: 20px;
+}
+
+/* Estilos para pre tags */
+pre {
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+/* Estilos para listas dentro de comparison */
+.comparison-item ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.comparison-item ul li {
+    margin-bottom: 8px;
+}
+
+/* Estilos para párrafos en cards */
+.card p {
+    margin-bottom: 10px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
